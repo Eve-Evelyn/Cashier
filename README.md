@@ -14,6 +14,8 @@ The main features of this system are:
 4. Reset the transaction to remove all the previously added items
 5. Check transaction summary and total price
 
+The system will also be able to catch invalid inputs such as string being inputted when asked to input qty, trying to update an item that has not existed yet in the transaction, etc.
+
 The workflow of this system is as follows:
 
 ![cashier flowchart](https://user-images.githubusercontent.com/123367779/216753815-00475521-e8ac-40c3-be94-04f4de280372.png)
@@ -26,3 +28,43 @@ There are 3 modules:
 
 # Test Case Result
 1. Start transaction and add item
+
+   ![image](https://user-images.githubusercontent.com/123367779/216757666-ba30afb8-2149-4e9d-b764-fc6c04d6189a.png)
+   
+2. Update item details
+   - Update item name
+   
+     ![image](https://user-images.githubusercontent.com/123367779/216757845-431a62f0-bd27-4bca-99f8-ee9dc586e132.png)
+     
+   - Update item qty
+   
+     ![image](https://user-images.githubusercontent.com/123367779/216757909-692d6b77-370f-4a9e-b821-1e4a11eb015e.png)
+
+   - Update item price
+
+     ![image](https://user-images.githubusercontent.com/123367779/216757944-9fe78606-81c7-4601-873d-deae7587a502.png)
+
+3. Delete an item and check order summary
+   
+   ![image](https://user-images.githubusercontent.com/123367779/216758100-b760c635-6450-4891-aace-d7c88b13eedf.png)
+   
+4. Reset transaction and check order summary
+
+   ![image](https://user-images.githubusercontent.com/123367779/216758169-bf356a2f-f116-4d19-9995-89ae262e7481.png)
+
+5. Check order summary, confirm order, and start new transaction
+
+   ![image](https://user-images.githubusercontent.com/123367779/216758353-644ae5a4-368e-4e96-ae54-12791b5256b7.png)
+
+6. Error handling
+   - Invalid input
+   
+     ![image](https://user-images.githubusercontent.com/123367779/216758477-6692dfe6-5fa7-4e45-b7bc-247016a8cb1f.png)
+
+   - Item not found
+   
+     ![image](https://user-images.githubusercontent.com/123367779/216758526-38f14513-309c-4a57-801e-93580b268ca5.png)
+
+# Further Improvements Needed
+1. Add a dictionary containing prices of each item so that the price do not need to be manually added and will be automatically filled once item name is inputted
+2. Develop a more proper user interface 
