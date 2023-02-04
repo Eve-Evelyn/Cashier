@@ -62,7 +62,6 @@ class Transaction:
         self.item_name = []
         self.qty = []
         self.price = []
-        self.qty_price = []
         self.num_of_items = 0
         print("All item in this transaction has been deleted")
 
