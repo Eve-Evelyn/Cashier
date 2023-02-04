@@ -53,7 +53,6 @@ class Transaction:
                     self.item_name.pop(i)
                     self.qty.pop(i)
                     self.price.pop(i)
-                    self.qty_price.pop(i)
                     self.num_of_items -= 1
                     break
             print(f"{del_item_name} has been deleted")
