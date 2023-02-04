@@ -9,7 +9,6 @@ class Transaction:
         self.item_name = []
         self.qty = []
         self.price = []
-        self.qty_price = []
         self.num_of_items = 0
 
     def add_item(self, added_item_name, added_qty, added_price):
@@ -17,7 +16,6 @@ class Transaction:
         self.qty.append(added_qty)
         self.price.append(added_price)
         self.num_of_items += 1
-        self.qty_price.append([added_qty, added_price])
 
     def check_order(self):
         self.item_index = list(range(1, len(self.item_name) + 1))
@@ -71,7 +69,7 @@ class Transaction:
     def total_price(self):
         self.calc_total_price = 0
         for i in range(0, self.num_of_items):
-            self.calc_total_price += (self.qty_price[i][0] * self.qty_price[i][1])
+            self.calc_total_price += (self.qty[i] * self.price[i])
         if self.calc_total_price > 500000:
             self.calc_total_price = 0.9 * self.calc_total_price
             print("You get 10% discount for purchasing above Rp 500.000,-")
