@@ -1,4 +1,5 @@
 def request_add_item(new_transaction):
+    """Ask user to input the details of the new item they would like to add"""
     new_item_name = input("Input the name of item: ")
 
     while True:
@@ -21,6 +22,7 @@ def request_add_item(new_transaction):
 
 
 def request_update_item(new_transaction, item_to_mod):
+    """Ask user to input the details of the item they would like to update"""
     if item_to_mod not in new_transaction.item_name:
         print("\033[1m" + "\033[91m" + "Item not found, please check the item name again" + "\033[0m")
     else:
